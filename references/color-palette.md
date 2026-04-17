@@ -6,59 +6,43 @@ Source: [raccoongang.com](https://raccoongang.com/) brand palette.
 
 ---
 
-## Brand Swatches (reference)
+## Brand Swatches (the only colors allowed)
 
 | Role | Hex |
 |------|-----|
 | Primary green | `#559479` |
-| Deep green | `#37604f` |
-| Lime accent | `#72bb25` |
-| Light lime | `#abe271` |
-| Warm orange | `#f89d6a` |
-| Cream (canvas) | `#f9f3ed` |
-| Warm beige | `#e8e1de` |
+| Warm orange | `#F89D6A` |
 | Ink | `#323232` |
-| Near-black | `#181a19` |
-| Mid-grey | `#747474` |
-| Alert red | `#dc3232` |
-| Sky blue | `#5897fb` |
-| Muted blue | `#778fcf` |
-| Signal yellow | `#ffb900` |
+| Near-black | `#232323` |
+| Cream (canvas + light text) | `#F9F3ED` |
+
+No off-brand colors. No lime accents, no blues, no yellows, no derived tints. Differentiation comes from **fill vs. outline** and **stroke weight**, not from expanding the palette.
 
 ---
 
 ## Shape Colors (Semantic)
 
-Colors encode meaning, not decoration. Each semantic purpose has a fill/stroke pair.
+Four visual treatments. Each carries a distinct meaning.
 
-| Semantic Purpose | Fill | Stroke |
-|------------------|------|--------|
-| Primary/Neutral | `#d0e6d7` | `#37604f` |
-| Secondary | `#abe271` | `#37604f` |
-| Tertiary | `#e8e1de` | `#323232` |
-| Start/Trigger | `#fde0d1` | `#c85a1f` |
-| End/Success | `#abe271` | `#37604f` |
-| Warning/Reset | `#f89d6a` | `#c85a1f` |
-| Decision | `#fff0b3` | `#b8860b` |
-| AI/LLM | `#d7defa` | `#3a5293` |
-| Inactive/Disabled | `#e8e1de` | `#747474` (use dashed stroke) |
-| Error | `#ffd5d5` | `#dc3232` |
+| Semantic Purpose | Fill | Stroke | Text |
+|------------------|------|--------|------|
+| Hero / Primary (main components, central truth) | `#559479` | `#232323` | `#F9F3ED` |
+| Start/Trigger / Alert / Audit | `#F89D6A` | `#323232` | `#323232` |
+| Supporting / Derived (outlined, green-tied) | `transparent` | `#559479` | `#323232` |
+| External / Neutral (outlined, ink) | `transparent` | `#323232` | `#323232` |
 
-**Rule**: Always pair a darker stroke with a lighter fill for contrast.
+**Rule**: Hero shapes get filled primary green with cream text. Triggers and audit artifacts get filled warm orange. Everything else is outlined — transparent fill with either a green stroke (if conceptually tied to the primary flow) or an ink stroke (if external / neutral).
 
 ---
 
 ## Text Colors (Hierarchy)
 
-Use color on free-floating text to create visual hierarchy without containers.
-
 | Level | Color | Use For |
 |-------|-------|---------|
-| Title | `#37604f` | Section headings, major labels |
+| Title | `#232323` | Section headings, major labels |
 | Subtitle | `#559479` | Subheadings, secondary labels |
-| Body/Detail | `#747474` | Descriptions, annotations, metadata |
-| On light fills | `#323232` | Text inside light-colored shapes |
-| On dark fills | `#f9f3ed` | Text inside dark-colored shapes |
+| On light fills / canvas | `#323232` | Default body text |
+| On dark fills (primary green) | `#F9F3ED` | Text inside `#559479` shapes |
 
 ---
 
@@ -68,8 +52,8 @@ Used for code snippets, data examples, and other concrete evidence inside techni
 
 | Artifact | Background | Text Color |
 |----------|-----------|------------|
-| Code snippet | `#181a19` | Syntax-colored (language-appropriate) |
-| JSON/data example | `#181a19` | `#72bb25` (lime) |
+| Code snippet | `#232323` | `#F9F3ED` |
+| JSON/data example | `#232323` | `#F9F3ED` |
 
 ---
 
@@ -77,9 +61,12 @@ Used for code snippets, data examples, and other concrete evidence inside techni
 
 | Element | Color |
 |---------|-------|
-| Arrows | Use the stroke color of the source element's semantic purpose |
-| Structural lines (dividers, trees, timelines) | Deep green (`#37604f`) or Mid-grey (`#747474`) |
-| Marker dots (fill + stroke) | Primary green (`#559479`) |
+| Arrows (all — regardless of flow type) | `#323232` |
+| Structural lines, dividers, async boundaries | `#323232` |
+| Hero element strokes | `#232323` |
+| Outlined shape strokes | `#559479` or `#323232` (per semantic) |
+
+**Rule**: Arrows are always ink `#323232`. Do not color-code arrows by flow type — semantic meaning comes from the shapes they connect, not the arrow color.
 
 ---
 
@@ -87,7 +74,7 @@ Used for code snippets, data examples, and other concrete evidence inside techni
 
 | Property | Value |
 |----------|-------|
-| Canvas background | `#f9f3ed` |
+| Canvas background | `#F9F3ED` |
 
 ---
 
