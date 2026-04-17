@@ -15,6 +15,8 @@ Generate `.excalidraw` JSON files that **argue visually**, not just display info
 
 To make this skill produce diagrams in your own brand style, edit `color-palette.md`. Everything else in this file is universal design methodology and Excalidraw best practices.
 
+**Brand logo is required on every diagram.** See the "Brand Logo" section of `color-palette.md` for the SVG source, placement rules, and the Excalidraw `image` element + `files` entry template. Embed it by default — do not skip it unless the user explicitly asks for an unbranded diagram.
+
 ---
 
 ## Core Philosophy
